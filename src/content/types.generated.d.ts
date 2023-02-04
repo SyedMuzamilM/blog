@@ -48,67 +48,60 @@ declare module 'astro:content' {
   slug: "14-architectural-design-ideas-for-spacious-interior",
   body: string,
   collection: "blog",
-  data: any
+  data: InferEntrySchema<"blog">
 },
 "complete-guide-fullstack-development.md": {
   id: "complete-guide-fullstack-development.md",
   slug: "complete-guide-fullstack-development",
   body: string,
   collection: "blog",
-  data: any
+  data: InferEntrySchema<"blog">
 },
 "essential-data-structures-algorithms.md": {
   id: "essential-data-structures-algorithms.md",
   slug: "essential-data-structures-algorithms",
   body: string,
   collection: "blog",
-  data: any
+  data: InferEntrySchema<"blog">
 },
 "every-next-level-of-your-life-will-demand-a-different-you.md": {
   id: "every-next-level-of-your-life-will-demand-a-different-you.md",
   slug: "every-next-level-of-your-life-will-demand-a-different-you",
   body: string,
   collection: "blog",
-  data: any
+  data: InferEntrySchema<"blog">
 },
 "how-to-become-frontend-master.md": {
   id: "how-to-become-frontend-master.md",
   slug: "how-to-become-frontend-master",
   body: string,
   collection: "blog",
-  data: any
-},
-"kitchensink.mdx": {
-  id: "kitchensink.mdx",
-  slug: "kitchensink",
-  body: string,
-  collection: "blog",
-  data: any
+  data: InferEntrySchema<"blog">
 },
 "nothing-new-about-undermining-women-autonomy.md": {
   id: "nothing-new-about-undermining-women-autonomy.md",
   slug: "nothing-new-about-undermining-women-autonomy",
   body: string,
   collection: "blog",
-  data: any
+  data: InferEntrySchema<"blog">
 },
 "template.md": {
   id: "template.md",
   slug: "template",
   body: string,
   collection: "blog",
-  data: any
+  data: InferEntrySchema<"blog">
 },
 "this-bread-pudding-will-give-you-all-the-fall-feels.md": {
   id: "this-bread-pudding-will-give-you-all-the-fall-feels.md",
   slug: "this-bread-pudding-will-give-you-all-the-fall-feels",
   body: string,
   collection: "blog",
-  data: any
+  data: InferEntrySchema<"blog">
 },
 },
 
 	};
 
-	type ContentConfig = never;
+	type ContentConfig = typeof import("./config");
 }
