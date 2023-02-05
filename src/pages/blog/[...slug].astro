@@ -35,7 +35,8 @@ const category = categories.find(
 <Layout
   title={post.data.title}
   desc={post.data.excerpt}
-  ogimage={post.data.image}>
+  ogimage={post.data.image}
+  keywords={post.data.tags}>
   <Container class="md:hidden">
     <div class="max-w-screen-md mx-auto">
       <!-- <div class="text-center">
@@ -74,9 +75,9 @@ const category = categories.find(
                 datetime={post.data.publishDate}>
                 {getFormattedDate(post.data.publishDate)}
               </time>
-              <span>
+              <!-- <span>
                 · {Math.round(injectedFrontmatter.estReadingTime) || "5"} min read
-              </span>
+              </span> --!>
             </div>
           </div>
         </div>
@@ -139,9 +140,9 @@ const category = categories.find(
               datetime={post.data.publishDate}>
               {getFormattedDate(post.data.publishDate)}
             </time>
-            <span>
+            <!-- <span>
               · {Math.round(injectedFrontmatter.estReadingTime) || "5"} min read
-            </span>
+            </span> --!>
           </div>
         </div>
       </div>
@@ -155,13 +156,13 @@ const category = categories.find(
         class="mx-auto my-3 prose prose-base dark:prose-invert prose-a:text-blue-600">
         <Content />
 
-        <div class="flex flex-wrap items-center w-full gap-3 md:w-auto">
+        <!-- <div class="flex flex-wrap items-center w-full gap-3 md:w-auto">
           {
             post.data.tags.map((tag) => (
               <span class="text-sm text-gray-500">#{tag}</span>
             ))
           }
-        </div>
+        </div> --!>
       </div>
 
       <div class="flex justify-center mt-7 mb-7">

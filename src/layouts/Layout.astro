@@ -9,17 +9,20 @@ export interface Props {
   title?: string;
   desc?: string;
   ogimage?: string;
+  keywords?: string[];
 }
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
-const { title, desc, ogimage = "/opengraph.jpg" } = Astro.props;
+const { title, desc, ogimage = "/opengraph.jpg", keywords } = Astro.props;
 
 const resolvedOGImage = checkImageUrl(ogimage, Astro.site);
 
 const makeTitle = title
   ? title + " | " + "Black Kalu"
   : "Black Kalu Blog - We talk about all the things about software engineering";
+
+const makeKeyWords = keywords ? keywords.join(', ') : "software eningeering, dsa, data structures, algorithms, reactjs, react, nextjs, aws, s3, ec2, blog"
 ---
 
 <!DOCTYPE html>
@@ -29,6 +32,7 @@ const makeTitle = title
     <meta name="viewport" content="width=device-width" />
     <link rel="icon" type="image/png" href="https://assets.blackkalu.com/blackkalu/logo" />
     <meta name="generator" content={Astro.generator} />
+    <meta name="keywords" content={makeKeyWords } />
     <SEO
       title={makeTitle}
       description={desc ||
