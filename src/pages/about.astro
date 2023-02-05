@@ -11,10 +11,10 @@ import Link from "@components/ui/link.astro";
   <Container>
     <Pagetitle>
       <Fragment slot="title">About</Fragment>
-      <Fragment slot="desc">We are a small passionate team.</Fragment>
+      <Fragment slot="desc">I am Syed Muzamil. And this is my blog</Fragment>
     </Pagetitle>
 
-    <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
+    <!-- <div class="grid md:grid-cols-3 gap-10 mx-auto max-w-4xl mt-12">
       {
         authors.slice(0, 3).map((item) => (
           <div class="group">
@@ -35,14 +35,39 @@ import Link from "@components/ui/link.astro";
           </div>
         ))
       }
-    </div>
+    </div> -->
 
-    <div class="mx-auto max-w-xl text-center mt-14">
-      <p class="text-lg leading-relaxed text-gray-600">
-        We're a multi-cultural team from around the world! We come from diverse
-        backgrounds, bringing different personalities, experiences and skills to
-        the job. This is what makes our team so special.
-      </p>
+    <div class="mx-auto max-w-xl text-left mt-14">
+      <section class="my-4">
+        <h2 class="text-2xl font-bold text-gray-800 mb-2">Introduction</h2>
+        <p class="text-lg leading-relaxed text-gray-600">
+          Hello, I'm Syed Muzamil. I'm a FullStack Developer working with
+          technologies like Reactjs, Nodejs, Express, Mongodb, Flutter, and also
+          some AWS technologies like S3, EC2, and others. I am currently working
+          at <a
+            class="text-blue-400 underline cursor-pointer"
+            target="__blank"
+            href="https://www.wealthup.me">wealthup</a
+          > as a Full Stack Developer .
+        </p>
+      </section>
+      <section class="my-4">
+        <h2 class="text-2xl font-bold text-gray-800 mb-2">Topics Covered</h2>
+        <p class="text-lg leading-relaxed text-gray-600">
+          The articles will mainly cover the topics that I already know well, as
+          well as those that I am learning. Most of the articles will be about
+          Web Development, but I will also cover some articles about Data
+          Structures and Algorithms.
+        </p>
+      </section>
+      <section class="my-4">
+        <h2 class="text-2xl font-bold text-gray-800 mb-2">Expertise</h2>
+        <p contenteditable="true" class="text-lg leading-relaxed text-gray-600">
+          As a 2nd year undergraduate student, I have experience with ReactJs,
+          NodeJs, MongoDB, and some other technologies that I learned on my own.
+          I have also worked as a Web Developer for more than 2 years.
+        </p>
+      </section>
       <div class="mt-8">
         <Link href="/contact" style="primary">Get in touch</Link>
       </div>
