@@ -14,7 +14,7 @@ export interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
-const { title, desc, ogimage = "/opengraph.jpg", keywords } = Astro.props;
+const { title, desc, ogimage = "https://assets.blackkalu.com/blackkalu/black_kalu_social_share.png", keywords } = Astro.props;
 
 const resolvedOGImage = checkImageUrl(ogimage, Astro.site);
 

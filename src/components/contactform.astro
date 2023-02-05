@@ -2,16 +2,12 @@
 import Button from "@components/ui/button.astro";
 ---
 
-<!-- To make this contact form work, create your free access key from https://web3forms.com/
-     Then you will get all form submissions in your email inbox. -->
 <form
-  action="https://api.web3forms.com/submit"
+  action="https://api.blackkalu.com/blog/contact"
   method="POST"
   id="form"
   class="needs-validation"
   novalidate>
-  <input type="hidden" name="access_key" value="YOUR_ACCESS_KEY_HERE" />
-  <!-- Create your free access key from https://web3forms.com/ -->
   <input type="checkbox" class="hidden" style="display:none" name="botcheck" />
   <div class="mb-5">
     <input
@@ -93,7 +89,7 @@ import Button from "@components/ui/button.astro";
 
     result.innerHTML = "Sending...";
 
-    fetch("https://api.web3forms.com/submit", {
+    fetch("https://api.blackkalu.com/blog/contact", {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -103,9 +99,9 @@ import Button from "@components/ui/button.astro";
     })
       .then(async (response) => {
         let json = await response.json();
-        if (response.status == 200) {
+        if (response.status == 201) {
           result.classList.add("text-green-500");
-          result.innerHTML = json.message;
+          result.innerHTML = "Thanks for contacting me. Will get back to you soon.";
         } else {
           console.log(response);
           result.classList.add("text-red-500");
