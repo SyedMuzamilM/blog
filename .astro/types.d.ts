@@ -67,34 +67,6 @@ declare module 'astro:content' {
 
 	const entryMap: {
 		"blog": {
-"14-architectural-design-ideas-for-spacious-interior.md": {
-  id: "14-architectural-design-ideas-for-spacious-interior.md",
-  slug: "14-architectural-design-ideas-for-spacious-interior",
-  body: string,
-  collection: "blog",
-  data: InferEntrySchema<"blog">
-},
-"how-to-become-frontend-master.md": {
-  id: "how-to-become-frontend-master.md",
-  slug: "how-to-become-frontend-master",
-  body: string,
-  collection: "blog",
-  data: InferEntrySchema<"blog">
-},
-"template.md": {
-  id: "template.md",
-  slug: "template",
-  body: string,
-  collection: "blog",
-  data: InferEntrySchema<"blog">
-},
-"this-bread-pudding-will-give-you-all-the-fall-feels.mdx": {
-  id: "this-bread-pudding-will-give-you-all-the-fall-feels.mdx",
-  slug: "this-bread-pudding-will-give-you-all-the-fall-feels",
-  body: string,
-  collection: "blog",
-  data: InferEntrySchema<"blog">
-},
 "what-are-bitwise-operators.md": {
   id: "what-are-bitwise-operators.md",
   slug: "what-are-bitwise-operators",
