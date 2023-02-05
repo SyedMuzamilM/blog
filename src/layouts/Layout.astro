@@ -20,7 +20,7 @@ const resolvedOGImage = checkImageUrl(ogimage, Astro.site);
 
 const makeTitle = title
   ? title + " | " + "Black Kalu"
-  : "Black Kalu Blog - We talk about all the things about software engineering";
+  : "Black Kalu - We discuss everything related to software engineering";
 
 const makeKeyWords = keywords ? keywords.join(', ') : "software eningeering, dsa, data structures, algorithms, reactjs, react, nextjs, aws, s3, ec2, blog"
 ---
@@ -36,7 +36,7 @@ const makeKeyWords = keywords ? keywords.join(', ') : "software eningeering, dsa
     <SEO
       title={makeTitle}
       description={desc ||
-        "Blog Kalu blog is where software developers learn new topics every day."}
+        "Every day, you learn something new about software engineering at Black Kalu"}
       canonical={canonicalURL}
       twitter={{
         creator: "@syedmuzamilm",
@@ -47,7 +47,7 @@ const makeKeyWords = keywords ? keywords.join(', ') : "software eningeering, dsa
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `Black Kalu - where you learn about new topics of software engineering every day.`,
+          title: `Black Kalu - We discuss everything related to software engineering.`,
           image: resolvedOGImage,
         },
         image: {
