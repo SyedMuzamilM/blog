@@ -5,6 +5,7 @@ publishDate: "2022-12-30T11:39:36.050Z"
 image: "https://images.unsplash.com/photo-1618220179428-22790b461013?auto=format&fit=crop&w=927&h=927"
 category: "lifestyle"
 author: "mario-sanchez"
+draft: true
 tags: [design, architecture, interior]
 ---
 

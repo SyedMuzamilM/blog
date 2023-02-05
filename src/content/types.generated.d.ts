@@ -50,37 +50,9 @@ declare module 'astro:content' {
   collection: "blog",
   data: InferEntrySchema<"blog">
 },
-"complete-guide-fullstack-development.md": {
-  id: "complete-guide-fullstack-development.md",
-  slug: "complete-guide-fullstack-development",
-  body: string,
-  collection: "blog",
-  data: InferEntrySchema<"blog">
-},
-"essential-data-structures-algorithms.md": {
-  id: "essential-data-structures-algorithms.md",
-  slug: "essential-data-structures-algorithms",
-  body: string,
-  collection: "blog",
-  data: InferEntrySchema<"blog">
-},
-"every-next-level-of-your-life-will-demand-a-different-you.md": {
-  id: "every-next-level-of-your-life-will-demand-a-different-you.md",
-  slug: "every-next-level-of-your-life-will-demand-a-different-you",
-  body: string,
-  collection: "blog",
-  data: InferEntrySchema<"blog">
-},
 "how-to-become-frontend-master.md": {
   id: "how-to-become-frontend-master.md",
   slug: "how-to-become-frontend-master",
-  body: string,
-  collection: "blog",
-  data: InferEntrySchema<"blog">
-},
-"nothing-new-about-undermining-women-autonomy.md": {
-  id: "nothing-new-about-undermining-women-autonomy.md",
-  slug: "nothing-new-about-undermining-women-autonomy",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
@@ -92,9 +64,16 @@ declare module 'astro:content' {
   collection: "blog",
   data: InferEntrySchema<"blog">
 },
-"this-bread-pudding-will-give-you-all-the-fall-feels.md": {
-  id: "this-bread-pudding-will-give-you-all-the-fall-feels.md",
+"this-bread-pudding-will-give-you-all-the-fall-feels.mdx": {
+  id: "this-bread-pudding-will-give-you-all-the-fall-feels.mdx",
   slug: "this-bread-pudding-will-give-you-all-the-fall-feels",
+  body: string,
+  collection: "blog",
+  data: InferEntrySchema<"blog">
+},
+"what-are-bitwise-operators.md": {
+  id: "what-are-bitwise-operators.md",
+  slug: "what-are-bitwise-operators",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
