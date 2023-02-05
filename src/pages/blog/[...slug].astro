@@ -77,7 +77,7 @@ const category = categories.find(
               </time>
               <!-- <span>
                 · {Math.round(injectedFrontmatter.estReadingTime) || "5"} min read
-              </span> --!>
+              </span> -->
             </div>
           </div>
         </div>
@@ -85,68 +85,64 @@ const category = categories.find(
     </div>
   </Container>
 
-  <div class="flex">
-
-  </div>
-
   <div
     class="md:flex md:gap-4 relative z-0 max-w-screen-lg mx-auto overflow-hidden">
     <div class="md:w-1/2 aspect-auto">
-    {
-      post.data.image && (
-        <Picture
-          src={post.data.image}
-          widths={[200, 400, 800]}
-          sizes="(max-width: 640px) 90vw, 480px"
-          aspectRatio="16:9"
-          width={1024}
-          heignt={576}
-          alt="Thumbnail"
-          loading="eager"
-          class="w-full"
-        />
-      )
-    }
+      {
+        post.data.image && (
+          <Picture
+            src={post.data.image}
+            widths={[200, 400, 800]}
+            sizes="(max-width: 640px) 90vw, 480px"
+            aspectRatio="16:9"
+            width={1024}
+            height={576}
+            alt="Thumbnail"
+            loading="eager"
+            class="w-full"
+          />
+        )
+      }
     </div>
-    <div class="hidden md:block md:w-1/2 flex flex-col gap-2">
+    <div class="hidden md:w-1/2 md:flex flex-col gap-2">
       <h1
-      class="mt-2 mb-3 text-3xl font-semibold tracking-tight lg:leading-snug text-brand-primary lg:text-4xl dark:text-white">
-      {post.data.title}
-    </h1>
-    <div class="flex mt-3 space-x-3 text-gray-500">
-      <div class="flex items-center gap-3">
-        <div class="relative flex-shrink-0 w-10 h-10">
-          {
-            author.image && (
-              <Image
-                src={author.image}
-                alt="Author Photo"
-                width={80}
-                height={80}
-                loading="eager"
-                class="rounded-full"
-              />
-            )
-          }
-        </div>
+        class="mt-2 mb-3 text-3xl font-semibold tracking-tight lg:leading-snug text-brand-primary lg:text-4xl dark:text-white">
+        {post.data.title}
+      </h1>
+      <div class="flex mt-3 space-x-3 text-gray-500">
+        <div class="flex items-center gap-3">
+          <div class="relative flex-shrink-0 w-10 h-10">
+            {
+              author.image && (
+                <Image
+                  src={author.image}
+                  alt="Author Photo"
+                  width={80}
+                  height={80}
+                  loading="eager"
+                  class="rounded-full"
+                />
+              )
+            }
+          </div>
 
-        <div>
-          <p class="text-gray-800 dark:text-gray-400">
-            {author.name}
-          </p>
-          <div class="flex items-center space-x-2 text-sm">
-            <time
-              class="text-gray-500 dark:text-gray-400"
-              datetime={post.data.publishDate}>
-              {getFormattedDate(post.data.publishDate)}
-            </time>
-            <!-- <span>
+          <div>
+            <p class="text-gray-800 dark:text-gray-400">
+              {author.name}
+            </p>
+            <div class="flex items-center space-x-2 text-sm">
+              <time
+                class="text-gray-500 dark:text-gray-400"
+                datetime={post.data.publishDate}>
+                {getFormattedDate(post.data.publishDate)}
+              </time>
+              <!-- <span>
               · {Math.round(injectedFrontmatter.estReadingTime) || "5"} min read
-            </span> --!>
+            </span> -->
+            </div>
           </div>
         </div>
       </div>
-    </div>
     </div>
   </div>
 
@@ -155,14 +151,6 @@ const category = categories.find(
       <div
         class="mx-auto my-3 prose prose-base dark:prose-invert prose-a:text-blue-600">
         <Content />
-
-        <!-- <div class="flex flex-wrap items-center w-full gap-3 md:w-auto">
-          {
-            post.data.tags.map((tag) => (
-              <span class="text-sm text-gray-500">#{tag}</span>
-            ))
-          }
-        </div> --!>
       </div>
 
       <div class="flex justify-center mt-7 mb-7">
@@ -172,8 +160,6 @@ const category = categories.find(
           ← View all posts
         </a>
       </div>
-      <!-- {author && <Authorcard author={author} />} -->
-      <!-- Todo: Show some random posts here for the same topic -->
     </article>
   </Container>
 </Layout>
