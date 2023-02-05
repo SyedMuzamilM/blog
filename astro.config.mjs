@@ -8,7 +8,7 @@ import sitemap from "@astrojs/sitemap";
 import { remarkReadingTime } from "./src/utils/all";
 
 export default defineConfig({
-  site: "https://stablo-astro.web3templates.com",
+  site: "https://blog.blackkalu.com/",
   experimental: {
     contentCollections: true,
   },
