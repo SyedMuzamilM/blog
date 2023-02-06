@@ -58,7 +58,7 @@ const makeKeyWords = keywords
         basic: {
           url: canonicalURL,
           type: "website",
-          title: `Black Kalu - We discuss everything related to software engineering.`,
+          title: makeTitle,
           image: resolvedOGImage,
         },
         image: {
@@ -82,6 +82,13 @@ const makeKeyWords = keywords
       gtag("config", "G-MQDZ1V0F25");
     </script>
     <!-- End Google tag (gtag.js) -->
+    <!-- Cloudflare Web Analytics -->
+    <script
+      defer
+      src="https://static.cloudflareinsights.com/beacon.min.js"
+      data-cf-beacon='{"token": "330cb26952e24a4ba59429d6cf3e0a3f"}'
+    ></script>
+    <!-- End Cloudflare Web Analytics -->
   </head>
   <body>
     <Navbar />

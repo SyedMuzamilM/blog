@@ -29,136 +29,135 @@ const category = categories.find(
   (item) => item.slug === post.data.category
 ) as Category;
 ---
-{post.data && (
-  <Layout
-    title={post.data.title}
-    desc={post.data.excerpt}
-    ogimage={post.data.image}
-    keywords={post.data.tags}>
-    <Container class="md:hidden">
-      <div class="max-w-screen-md mx-auto">
-        <!-- <div class="text-center">
+
+<Layout
+  title={post.data.title}
+  desc={post.data.excerpt}
+  ogimage={post.data.image}
+  keywords={post.data.tags}>
+  <Container class="md:hidden">
+    <div class="max-w-screen-md mx-auto">
+      <!-- <div class="text-center">
           <Label theme={category.color}>{category.title}</Label>
         </div> -->
-  
-        <h1
-          class="mt-2 mb-3 text-3xl font-semibold tracking-tight text-center lg:leading-snug text-brand-primary lg:text-4xl dark:text-white">
-          {post.data.title}
-        </h1>
-  
-        <div class="flex justify-center mt-3 space-x-3 text-gray-500">
-          <div class="flex items-center gap-3">
-            <div class="relative flex-shrink-0 w-10 h-10">
-              {
-                author.image && (
-                  <Image
-                    src={author.image}
-                    alt="Author Photo"
-                    width={80}
-                    height={80}
-                    loading="eager"
-                    class="rounded-full"
-                  />
-                )
-              }
-            </div>
-  
-            <div>
-              <p class="text-gray-800 dark:text-gray-400">
-                {author.name}
-              </p>
-              <div class="flex items-center space-x-2 text-sm">
-                <time
-                  class="text-gray-500 dark:text-gray-400"
-                  datetime={post.data.publishDate}>
-                  {getFormattedDate(post.data.publishDate)}
-                </time>
-                <!-- <span>
+
+      <h1
+        class="mt-2 mb-3 text-3xl font-semibold tracking-tight text-center lg:leading-snug text-brand-primary lg:text-4xl dark:text-white">
+        {post.data.title}
+      </h1>
+
+      <div class="flex justify-center mt-3 space-x-3 text-gray-500">
+        <div class="flex items-center gap-3">
+          <div class="relative flex-shrink-0 w-10 h-10">
+            {
+              author.image && (
+                <Image
+                  src={author.image}
+                  alt="Author Photo"
+                  width={80}
+                  height={80}
+                  loading="eager"
+                  class="rounded-full"
+                />
+              )
+            }
+          </div>
+
+          <div>
+            <p class="text-gray-800 dark:text-gray-400">
+              {author.name}
+            </p>
+            <div class="flex items-center space-x-2 text-sm">
+              <time
+                class="text-gray-500 dark:text-gray-400"
+                datetime={post.data.publishDate}>
+                {getFormattedDate(post.data.publishDate)}
+              </time>
+              <!-- <span>
                   · {Math.round(injectedFrontmatter.estReadingTime) || "5"} min read
                 </span> -->
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </Container>
-  
-    <div
-      class="md:flex md:gap-4 relative z-0 max-w-screen-lg mx-auto overflow-hidden">
-      <div class="md:w-1/2 aspect-auto">
-        {
-          post.data.image && (
-            <Picture
-              src={post.data.image}
-              widths={[200, 400, 800]}
-              sizes="(max-width: 640px) 90vw, 480px"
-              aspectRatio="16:9"
-              width={1024}
-              height={576}
-              alt="Thumbnail"
-              loading="eager"
-              class="w-full"
-            />
-          )
-        }
-      </div>
-      <div class="hidden md:w-1/2 md:flex flex-col gap-2">
-        <h1
-          class="mt-2 mb-3 text-3xl font-semibold tracking-tight lg:leading-snug text-brand-primary lg:text-4xl dark:text-white">
-          {post.data.title}
-        </h1>
-        <div class="flex mt-3 space-x-3 text-gray-500">
-          <div class="flex items-center gap-3">
-            <div class="relative flex-shrink-0 w-10 h-10">
-              {
-                author.image && (
-                  <Image
-                    src={author.image}
-                    alt="Author Photo"
-                    width={80}
-                    height={80}
-                    loading="eager"
-                    class="rounded-full"
-                  />
-                )
-              }
-            </div>
-  
-            <div>
-              <p class="text-gray-800 dark:text-gray-400">
-                {author.name}
-              </p>
-              <div class="flex items-center space-x-2 text-sm">
-                <time
-                  class="text-gray-500 dark:text-gray-400"
-                  datetime={post.data.publishDate}>
-                  {getFormattedDate(post.data.publishDate)}
-                </time>
-                <!-- <span>
-                · {Math.round(injectedFrontmatter.estReadingTime) || "5"} min read
-              </span> -->
-              </div>
             </div>
           </div>
         </div>
       </div>
     </div>
-  
-    <Container>
-      <article class="max-w-screen-md mx-auto">
-        <div
-          class="mx-auto my-3 prose prose-base dark:prose-invert prose-a:text-blue-600">
-          <Content />
+  </Container>
+
+  <div
+    class="md:flex md:gap-4 relative z-0 max-w-screen-lg mx-auto overflow-hidden">
+    <div class="md:w-1/2 aspect-auto">
+      {
+        post.data.image && (
+          <Picture
+            src={post.data.image}
+            widths={[200, 400, 800]}
+            sizes="(max-width: 640px) 90vw, 480px"
+            aspectRatio="16:9"
+            width={1024}
+            height={576}
+            alt="Thumbnail"
+            loading="eager"
+            class="w-full"
+          />
+        )
+      }
+    </div>
+    <div class="hidden md:w-1/2 md:flex flex-col gap-2">
+      <h1
+        class="mt-2 mb-3 text-3xl font-semibold tracking-tight lg:leading-snug text-brand-primary lg:text-4xl dark:text-white">
+        {post.data.title}
+      </h1>
+      <div class="flex mt-3 space-x-3 text-gray-500">
+        <div class="flex items-center gap-3">
+          <div class="relative flex-shrink-0 w-10 h-10">
+            {
+              author.image && (
+                <Image
+                  src={author.image}
+                  alt="Author Photo"
+                  width={80}
+                  height={80}
+                  loading="eager"
+                  class="rounded-full"
+                />
+              )
+            }
+          </div>
+
+          <div>
+            <p class="text-gray-800 dark:text-gray-400">
+              {author.name}
+            </p>
+            <div class="flex items-center space-x-2 text-sm">
+              <time
+                class="text-gray-500 dark:text-gray-400"
+                datetime={post.data.publishDate}>
+                {getFormattedDate(post.data.publishDate)}
+              </time>
+              <!-- <span>
+                · {Math.round(injectedFrontmatter.estReadingTime) || "5"} min read
+              </span> -->
+            </div>
+          </div>
         </div>
-  
-        <div class="flex justify-center mt-7 mb-7">
-          <a
-            href="/"
-            class="px-5 py-3 text-sm text-blue-600 transition rounded-md dark:text-blue-500 bg-blue-50 hover:bg-blue-100">
-            ← View all posts
-          </a>
-        </div>
-      </article>
-    </Container>
-  </Layout>
-)}
+      </div>
+    </div>
+  </div>
+
+  <Container>
+    <article class="max-w-screen-md mx-auto">
+      <div
+        class="mx-auto my-3 prose prose-base dark:prose-invert prose-a:text-blue-600">
+        <Content />
+      </div>
+
+      <div class="flex justify-center mt-7 mb-7">
+        <a
+          href="/"
+          class="px-5 py-3 text-sm text-blue-600 transition rounded-md dark:text-blue-500 bg-blue-50 hover:bg-blue-100">
+          ← View all posts
+        </a>
+      </div>
+    </article>
+  </Container>
+</Layout>
