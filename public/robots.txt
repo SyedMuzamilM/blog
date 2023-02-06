@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: http://blog.blackkalu.com/sitemap-index.xml
+Sitemap: http://blackkalu.com/sitemap-index.xml
