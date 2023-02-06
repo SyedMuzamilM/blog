@@ -147,6 +147,14 @@
     uvu "^0.5.0"
     vfile-message "^3.0.0"
 
+"@astrojs/partytown@^1.0.3":
+  version "1.0.3"
+  resolved "https://registry.yarnpkg.com/@astrojs/partytown/-/partytown-1.0.3.tgz#87747ed4e9d262a73898ce65628234c2542321c5"
+  integrity sha512-u2/pG9owRipICz/PksLUUqUat98sm0/YODvv3/IKKJ0JCwF7+0olbMvyyvoj7kJooIXh0XowcOjEs5vhCYFo5g==
+  dependencies:
+    "@builder.io/partytown" "^0.7.4"
+    mrmime "^1.0.0"
+
 "@astrojs/prism@^1.0.0", "@astrojs/prism@^1.0.2":
   version "1.0.2"
   resolved "https://registry.yarnpkg.com/@astrojs/prism/-/prism-1.0.2.tgz#f01cad9007a46dc006d129d99653bd1652657ecf"
@@ -409,6 +417,11 @@
     "@babel/helper-string-parser" "^7.19.4"
     "@babel/helper-validator-identifier" "^7.19.1"
     to-fast-properties "^2.0.0"
+
+"@builder.io/partytown@^0.7.4":
+  version "0.7.5"
+  resolved "https://registry.yarnpkg.com/@builder.io/partytown/-/partytown-0.7.5.tgz#f501e3db37a5ac659f21ba0c2e61b278e58b64b9"
+  integrity sha512-Zbr2Eo0AQ4yzmQr/36/h+6LKjmdVBB3Q5cGzO6rtlIKB/IOpbQVUZW+XAnhpJmJr9sIF97OZjgbhG9k7Sjn4yw==
 
 "@emmetio/abbreviation@^2.2.3":
   version "2.2.3"
@@ -985,7 +998,7 @@ astro-seo@^0.6.1:
   resolved "https://registry.yarnpkg.com/astro-seo/-/astro-seo-0.6.1.tgz#d3225a7ea6d8d1af4a4cbee41aa992a1fae9c96f"
   integrity sha512-eszmxiycjfLcmoRyB8x5lCrWAwcSHs1i5riR1a5JbyJI8OQAl9tn1JvWFRuZvNH483CFdfNCczirnc805t/soA==
 
-astro@^2.0.4:
+astro@^2.0.0:
   version "2.0.6"
   resolved "https://registry.yarnpkg.com/astro/-/astro-2.0.6.tgz#94d903066514b4e95a04a71121a0403716e9f025"
   integrity sha512-aI8Ijy2EpMyP5SpjmDJpEUdNL6CUAxnja6IeaBC1BokD/mNAnijtmMnTyWVI3UeEZ727wYLISQMyqCfEUq8VNA==
@@ -2943,6 +2956,11 @@ mri@^1.1.0:
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/mri/-/mri-1.2.0.tgz#6721480fec2a11a4889861115a48b6cbe7cc8f0b"
   integrity sha512-tzzskb3bG8LvYGFF/mDTpq3jpI6Q9wc3LEmBaghu+DdCssd1FakN7Bc0hVNmEyGq1bq3RgfkCb3cmQLpNPOroA==
+
+mrmime@^1.0.0:
+  version "1.0.1"
+  resolved "https://registry.yarnpkg.com/mrmime/-/mrmime-1.0.1.tgz#5f90c825fad4bdd41dc914eff5d1a8cfdaf24f27"
+  integrity sha512-hzzEagAgDyoU1Q6yg5uI+AorQgdvMCur3FcKf7NhMKWsaYg+RnbTyHRa/9IlLF9rf455MOCtcqqrQQ83pPP7Uw==
 
 ms@2.1.2:
   version "2.1.2"

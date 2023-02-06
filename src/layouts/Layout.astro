@@ -14,7 +14,12 @@ export interface Props {
 
 const canonicalURL = new URL(Astro.url.pathname, Astro.site).toString();
 
-const { title, desc, ogimage = "/opengraph.png", keywords } = Astro.props;
+const {
+  title,
+  desc,
+  ogimage = "https://assets.blackkalu.com/blackkalu/black_kalu_social_share.png",
+  keywords,
+} = Astro.props;
 
 const resolvedOGImage = checkImageUrl(ogimage, Astro.site);
 
@@ -61,6 +66,22 @@ const makeKeyWords = keywords
         },
       }}
     />
+
+    <!-- Google tag (gtag.js) -->
+    <script
+      type="text/partytown"
+      src="https://www.googletagmanager.com/gtag/js?id=G-MQDZ1V0F25"
+    ></script>
+    <script type="text/partytown">
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+
+      gtag("config", "G-MQDZ1V0F25");
+    </script>
+    <!-- End Google tag (gtag.js) -->
   </head>
   <body>
     <Navbar />
