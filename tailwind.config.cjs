@@ -10,7 +10,8 @@ module.exports = {
         gray: colors.neutral,
       },
       fontFamily: {
-        sans: ["InterVariable", "Inter", ...defaultTheme.fontFamily.sans],
+        sans: ["Poppins", ...defaultTheme.fontFamily.sans],
+        serif: ["Kaisei Tokumin", ...defaultTheme.fontFamily.serif]
       },
       aspectRatio: {
         "4/3": "4 / 3",
