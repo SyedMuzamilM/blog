@@ -1,0 +1,114 @@
+---
+import Layout from "@layouts/Layout.astro";
+import Container from "@components/container.astro";
+import { Image } from "@astrojs/image/components";
+import { authors } from "@data/authors";
+import Pagetitle from "@components/pagetitle.astro";
+import Link from "@components/ui/link.astro";
+---
+
+<Layout
+  title="Privacy Policy"
+  desc="At Black Kalu, we take your privacy seriously. This Privacy Policy outlines the types of personal information we collect, how we use this information, and the steps we take to protect it.">
+  <Container>
+    <Pagetitle class="max-w-xl mx-auto">
+      <Fragment slot="title">Privacy Policy</Fragment>
+      <Fragment slot="desc">
+        At Black Kalu, we take your privacy seriously. This Privacy Policy
+        outlines the types of personal information we collect, how we use this
+        information, and the steps we take to protect it.
+      </Fragment>
+    </Pagetitle>
+
+    <div class="mx-auto max-w-xl text-left mt-14">
+      <section class="my-4">
+        <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-2">
+          Information Collection and Use
+        </h2>
+        <p class="text-base md:text-lg leading-relaxed text-gray-600">
+          When you visit our blog, we collect certain information through our
+          website analytics tools, including Google Analytics and Cloudflare, to
+          understand how our pages are performing. This information may include
+          your IP address, browser type, and the pages you visit on our site.
+        </p>
+        <p class="text-base md:text-lg leading-relaxed text-gray-600">
+          We also collect personal information that you voluntarily provide to
+          us through our contact section, which includes your name, email
+          address and the message you send us. We use this information to
+          respond to your inquiries and to provide better support.
+        </p>
+      </section>
+      <section class="my-4">
+        <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-2">
+          Information Sharing and Disclosure
+        </h2>
+        <p class="text-base md:text-lg leading-relaxed text-gray-600">
+          We do not sell, trade, or otherwise share your personal information
+          with third parties for their own marketing purposes.
+        </p>
+        <p class="text-base md:text-lg leading-relaxed text-gray-600">
+          We may share your information with third-party service providers who
+          perform functions on our behalf, such as website hosting, data
+          analysis, and customer service. These service providers are restricted
+          from using your information for any purpose beyond the specific
+          services they provide to us.
+        </p>
+      </section>
+      <section class="my-4">
+        <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-2">
+          Data Storage and Security
+        </h2>
+        <p class="text-base md:text-lg leading-relaxed text-gray-600">
+          We take reasonable and appropriate measures to protect your personal
+          information from unauthorized access, alteration, or destruction.
+        </p>
+        <p class="text-base md:text-lg leading-relaxed text-gray-600">
+          However, no method of data transmission over the internet, or method
+          of electronic storage, is 100% secure. Therefore, while we strive to
+          use commercially acceptable means to protect your personal
+          information, we cannot guarantee its absolute security.
+        </p>
+      </section>
+      <section class="my-4">
+        <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-2">
+          Your Choices and Rights
+        </h2>
+        <p class="text-base md:text-lg leading-relaxed text-gray-600">
+          You have the right to request access to and deletion of your personal
+          information that we collect and store. If you would like to exercise
+          these rights, please contact us at <a
+            class="text-blue-600 underline"
+            href="mailto:contact@blackkalu.com">contact@blackkalu.com</a
+          >.
+        </p>
+      </section>
+      <section class="my-4">
+        <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-2">
+          Changes to This Privacy Policy
+        </h2>
+        <p class="text-base md:text-lg leading-relaxed text-gray-600">
+          We may update this Privacy Policy from time to time. If we make
+          material changes to the way we collect, use, or share your personal
+          information, we will provide notice through our blog. Your continued
+          use of our website following the posting of any changes constitutes
+          your acceptance of the revised Privacy Policy.
+        </p>
+      </section>
+      <section class="my-4">
+        <h2 class="text-xl md:text-2xl font-bold text-gray-800 mb-2">
+          Contact Us
+        </h2>
+        <p class="text-base md:text-lg leading-relaxed text-gray-600">
+          If you have any questions or concerns about this Privacy Policy,
+          please contact us at <a
+            class="text-blue-600 underline"
+            href="mailto:contact@blackkalu.com">contact@blackkalu.com</a
+          > or <a class="text-blue-600 underline" href="/contact">here</a>.
+        </p>
+      </section>
+      <p class="text-base md:text-lg leading-relaxed text-gray-800 mt-8">
+        Effective Date: Feb 07, 2023
+      </p>
+    </div>
+  </Container>
+</Layout>
