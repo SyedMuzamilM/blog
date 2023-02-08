@@ -67,6 +67,20 @@ declare module 'astro:content' {
 
 	const entryMap: {
 		"blog": {
+"a-bignners-guid-to-bitwise-operators-understanding-not-and-or-and-xor.md": {
+  id: "a-bignners-guid-to-bitwise-operators-understanding-not-and-or-and-xor.md",
+  slug: "a-bignners-guid-to-bitwise-operators-understanding-not-and-or-and-xor",
+  body: string,
+  collection: "blog",
+  data: InferEntrySchema<"blog">
+},
+"introduction-to-binary-numbers.md": {
+  id: "introduction-to-binary-numbers.md",
+  slug: "introduction-to-binary-numbers",
+  body: string,
+  collection: "blog",
+  data: InferEntrySchema<"blog">
+},
 "what-are-bitwise-operators.md": {
   id: "what-are-bitwise-operators.md",
   slug: "what-are-bitwise-operators",

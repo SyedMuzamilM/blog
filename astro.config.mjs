@@ -5,9 +5,8 @@ import image from "@astrojs/image";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import { remarkReadingTime } from "./src/utils/all";
-
-// https://astro.build/config
 import partytown from "@astrojs/partytown";
+import serviceWorker from "astro-service-worker";
 
 // https://astro.build/config
 export default defineConfig({
@@ -18,11 +17,18 @@ export default defineConfig({
     smartypants: true,
     gfm: true
   },
-  integrations: [tailwind(), image({
-    serviceEntryPoint: "@astrojs/image/sharp"
-  }), mdx(), sitemap(), partytown({
-    config: {
-      forward: ["dataLayer.push"]
-    }
-  })]
+  integrations: [
+    tailwind(),
+    image({
+      serviceEntryPoint: "@astrojs/image/sharp"
+    }),
+    mdx(),
+    sitemap(),
+    partytown({
+      config: {
+        forward: ["dataLayer.push"]
+      }
+    }),
+    serviceWorker(),
+  ]
 });
