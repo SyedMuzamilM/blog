@@ -3,11 +3,10 @@ title: "Introduction to Binary Number: Understanding, Conversion, and Applicatio
 ogTitle: "Binary Numbers for Beginners: Easy Guide to Understanding and Conversion"
 excerpt: "Get started with binary numbers with this beginner-friendly guide. Learn what binary numbers are, how to convert decimal to binary, and some basic applications of binary numbers in computing."
 publishDate: "2023-02-08T11:39:36.050Z"
-image: "https://assets.blackkalu.com/blackkalu/a_beginners_guide_to_bitwise_operators.png" # Need to change the image
+image: "https://assets.blackkalu.com/blackkalu/uploads/introduction_to_binary_number_system.png"
 category: "technology"
-# draft: true
 author: "syed-muzamil"
-tags: [c++ bitwise operators, c bitwise operators, bitwise operators, bit shifting, left shift operator, right shift operator, bitwise and, bitwise or, bitwise xor, bitwise not, binary mathematics, binary]
+tags: [binary number system, binary numbers, binary numbers for beginners, introduction to binary numbers, decimal to binary, binary to decimal]
 ---
 
 In this article I will try to explain binary number system, conversion of decimal number to binary number, and some applications of binary numbers. 
@@ -44,3 +43,26 @@ This table lists all 3-bit numbers along with their decimal equivalents. As ther
 
 ## Conversion
 
+Now you have a basic understanding of binary numbers, let’s convert the decimal to binary and binary to decimal. In order to convert a decimal number into a binary number we need to divide the number will 2 and get the reminder and store the remainder. We will follow this process until the number becomes 1 and then we stop.
+
+![Decimal To Binary](https://assets.blackkalu.com/blackkalu/uploads/decimal_to_binary.png)
+
+As you can see in the above example we are taking 50 and dividing it by 2, storing the reminders until it becomes 1, that is when we stop and take the remaining 1 along with all the reminders from bottom to top.
+
+So the binary representation of decimal number 50<sub>10</sub> is 110010<sub>2</sub> 
+
+#### Converting Binary to Decimal
+
+To convert the binary number into its decimal representation is very simple and easy to do. Let's take the same example 110010<sub>2</sub> which is the binary representation of 50<sub>10</sub>. In order to convert the binary number into decimal we need to simply multiple each bit with 2<sup>x</sup>, where x starts from 0 going from right to left. I also explained the position of the digits which starts from the rightmost digit. Units position, 2's position, 4's position and so on.
+
+(1 x 2<sup>5</sup>) + (1 x 2<sup>4</sup>) + (0 x 2<sup>3</sup>) + (0 x 2<sup>2</sup>) + (1 x 2<sup>1</sup>) + (0 x 2<sup>0</sup>) = 32 + 16 + 0 + 0 + 2 + 0 = 50
+
+This is how we convert binary number into its decimal representation.
+
+## Applications
+
+In computer systems, binary numbers are used in memory storage and data transmission. Binary numbers are also used in data compression algorithms to reduce the size of data while preserving its original form. Binary numbers are used in the digital encoding. Also, binary number system can be used in Boolean algebra.
+
+---
+
+This was just an introduction to the binary number system. There are lots of topics that I didn’t cover here, like 1’s complement, 2’s complement, Representation of negative numbers, and so on. I wanted to give you a brief introduction to the binary number system which we will be using in other bitwise operators that I didn’t mention in the previous article. If you didn't read that [click here](https://www.blackkalu.com/what-are-bitwise-operators.). Thanks for reading, I hope you enjoyed and learned something from this article. 

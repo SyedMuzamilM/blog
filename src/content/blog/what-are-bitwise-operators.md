@@ -6,7 +6,7 @@ publishDate: "2023-02-05T11:39:36.050Z" # Todo: Need to change the date to publi
 image: "https://images.unsplash.com/photo-1610563166150-b34df4f3bcd6?&auto=format&fit=crop&w=1976&q=80"
 category: "technology"
 author: "syed-muzamil"
-tags: [c++ bitwise operators, c bitwise operators, bitwise operators, bit shifting, left shift operator, right shift operator, bitwise and, bitwise or, bitwise xor, bitwise not, binary mathematics, binary]
+tags: [what are bitwise operators, bitwise operators, c++ bitwise operators, c bitwise operators, bitwise operators, bit shifting, left shift operator, right shift operator, bitwise and, bitwise or, bitwise xor, bitwise not, binary mathematics, binary]
 ---
 
 Bitwise Operators are a set of operators that operate on individual bits in a value, rather than the value as a whole. They perform operations such as AND, OR, XOR, NOT, and bit shifting on binary representations of values. These operations can be used for various purposes, including testing individual bits, setting or clearing bits, and manipulating binary values. Bitwise operators are often used in low-level programming, where the optimization of memory and processing power is important, but they can also be useful in higher-level applications. They can be used in various programming languages, including C, C++, Java, and Python.
