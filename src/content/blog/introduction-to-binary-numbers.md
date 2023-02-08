@@ -9,7 +9,7 @@ author: "syed-muzamil"
 tags: [binary number system, binary numbers, binary numbers for beginners, introduction to binary numbers, decimal to binary, binary to decimal]
 ---
 
-In this article I will try to explain binary number system, conversion of decimal number to binary number, and some applications of binary numbers. 
+In this article, I will try to explain the binary number system, the conversion of decimal numbers to binary numbers, and some applications of binary numbers.
 
 ## Introduction to binary numbers
 
