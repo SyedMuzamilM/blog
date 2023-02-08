@@ -1,6 +1,7 @@
 ---
 title: "What are Bitwise Operators?"
-excerpt: "Let's talk about Bitwise Operators and there uses."
+ogTitle: "Bitwise Operators: A Complete Guide for Beginners"
+excerpt: "Take a deep dive into bitwise operators in this comprehensive guide for beginners. Learn what bitwise operators are, how to use them in computer programming, and real-world applications of bitwise operations."
 publishDate: "2023-02-05T11:39:36.050Z" # Todo: Need to change the date to publishing date
 image: "https://images.unsplash.com/photo-1610563166150-b34df4f3bcd6?&auto=format&fit=crop&w=1976&q=80"
 category: "technology"
