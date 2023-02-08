@@ -6,7 +6,7 @@ import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import { remarkReadingTime } from "./src/utils/all";
 import partytown from "@astrojs/partytown";
-import serviceWorker from "astro-service-worker";
+import serviceWorker from "astrojs-service-worker";
 
 // https://astro.build/config
 export default defineConfig({
