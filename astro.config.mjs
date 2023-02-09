@@ -24,5 +24,7 @@ export default defineConfig({
     config: {
       forward: ["dataLayer.push", "adsbygoogle.push"]
     }
-  }), serviceWorker(), compress()]
+  }), serviceWorker(), compress({
+    svg: false
+  })]
 });
