@@ -7,6 +7,7 @@ import sitemap from "@astrojs/sitemap";
 import { remarkReadingTime } from "./src/utils/all";
 import partytown from "@astrojs/partytown";
 import serviceWorker from "astrojs-service-worker";
+import compress from "astro-compress";
 
 // https://astro.build/config
 export default defineConfig({
@@ -17,18 +18,11 @@ export default defineConfig({
     smartypants: true,
     gfm: true
   },
-  integrations: [
-    tailwind(),
-    image({
-      serviceEntryPoint: "@astrojs/image/sharp"
-    }),
-    mdx(),
-    sitemap(),
-    partytown({
-      config: {
-        forward: ["dataLayer.push", "adsbygoogle.push"]
-      }
-    }),
-    serviceWorker(),
-  ]
+  integrations: [tailwind(), image({
+    serviceEntryPoint: "@astrojs/image/sharp"
+  }), mdx(), sitemap(), partytown({
+    config: {
+      forward: ["dataLayer.push", "adsbygoogle.push"]
+    }
+  }), serviceWorker(), compress()]
 });
