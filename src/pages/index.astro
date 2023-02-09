@@ -24,6 +24,13 @@ import { latestPosts } from "@utils/content";
             ))
         }
       </div>
+      <div class="grid gap-10 mt-10 lg:gap-10 md:grid-cols-2 xl:grid-cols-3">
+        {
+          latestPosts
+            .slice(2)
+            .map((post) => <Postlist post={post} aspect="square" />)
+        }
+      </div>
       <script
         async
         src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5065168668220179"
@@ -39,13 +46,6 @@ import { latestPosts } from "@utils/content";
       <script>
         (adsbygoogle = window.adsbygoogle || []).push({});
       </script>
-      <div class="grid gap-10 mt-10 lg:gap-10 md:grid-cols-2 xl:grid-cols-3">
-        {
-          latestPosts
-            .slice(2)
-            .map((post) => <Postlist post={post} aspect="square" />)
-        }
-      </div>
     </main>
   </Container>
 </Layout>
