@@ -1,12 +1,18 @@
 import React, { useEffect, useState } from 'react'
 
-const PostViews: React.FC<{ slug: string; }> = ({ slug }) => {
+const PostViews = () => {
   const [views, setViews] = useState<number>(0);
 
   useEffect(() => {
+    const url = window.location.href;
+    const urlArray = url.split("/");
+    let slug = urlArray.pop();
+
+    if (!slug?.length) slug = urlArray.pop();
+
     (async () => {
       try {
-        const res = await fetch("https://api.blackkalu.com/api/v1/blog/views/", {
+        const res = await fetch("https://api.blackkalu.com/api/v1/blog/views", {
           method: "POST",
           headers: {
             "Content-Type": "application/json"
