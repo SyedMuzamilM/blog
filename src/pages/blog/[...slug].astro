@@ -10,6 +10,8 @@ import { CollectionEntry, getCollection } from "astro:content";
 import type { Author } from "@data/authors";
 import type { Category } from "@data/category";
 
+import PostViews from "@components/ui/PostViews";
+
 type Props = CollectionEntry<"blog">;
 
 export async function getStaticPaths() {
@@ -79,6 +81,7 @@ const category = categories.find(
                 </span> -->
             </div>
           </div>
+          <PostViews slug={post.data.slug} client:load />
         </div>
       </div>
     </div>
@@ -140,6 +143,7 @@ const category = categories.find(
               </span> -->
             </div>
           </div>
+          <PostViews slug={post.data.slug} client:load />
         </div>
       </div>
     </div>
