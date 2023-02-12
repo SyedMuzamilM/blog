@@ -11,7 +11,7 @@ tags: [negative binary numbers, binary number, twos complement, ones complement,
 
 In the previous article, I introduced you to the Binary Number system. If you have not read that article [click here](https://www.blackkalu.com/blog/introduction-to-binary-numbers). In that article, I introduced binary numbers, the conversion of decimal and binary numbers, and talked about some applications of the binary number system. I didn’t talk about how negative numbers are represented in the binary number system, that is what I am going to explain in this article.
 
-Since [binary numbers](https://www.blackkalu.com/blgo/introduction-to-binary-numbers) can have only two digits/symbols either 0 or 1, so it is not possible to add minus or plus symbol in front on a binary number.
+Since [binary numbers](https://www.blackkalu.com/blgo/introduction-to-binary-numbers) can have only two digits/symbols either 0 or 1,it is not possible to add minus or plus symbol in front of a binary number.
 
 In a decimal number, we add a minus symbol in front of a number if it is negative. In computer systems, we represent a negative and positive number by adding an extra bit in front of them called a sign bit. If the bit is 0 then the number is positive else if the bit is 1 then the number is negative.
 
