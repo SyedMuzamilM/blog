@@ -4,6 +4,10 @@ const PostViews = () => {
   const [views, setViews] = useState<number>(0);
 
   useEffect(() => {
+    if (!window.location.host.includes("blackkalu.com")) {
+      return;
+    }
+
     const url = window.location.href;
     const urlArray = url.split("/");
     let slug = urlArray.pop();

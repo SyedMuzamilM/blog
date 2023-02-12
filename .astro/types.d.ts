@@ -81,6 +81,13 @@ declare module 'astro:content' {
   collection: "blog",
   data: InferEntrySchema<"blog">
 },
+"representation-of-negative-binary-numbers.md": {
+  id: "representation-of-negative-binary-numbers.md",
+  slug: "representation-of-negative-binary-numbers",
+  body: string,
+  collection: "blog",
+  data: InferEntrySchema<"blog">
+},
 "what-are-bitwise-operators.md": {
   id: "what-are-bitwise-operators.md",
   slug: "what-are-bitwise-operators",
