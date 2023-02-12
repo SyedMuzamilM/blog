@@ -16,13 +16,13 @@ Since [binary numbers](https://www.blackkalu.com/blgo/introduction-to-binary-num
 In a decimal number, we add a minus symbol in front of a number if it is negative. In computer systems, we represent a negative and positive number by adding an extra bit in front of them called a sign bit. If the bit is 0 then the number is positive else if the bit is 1 then the number is negative.
 
 ## Ways to represent negative numbers in binary number system
-There are several way to represent negative numbers in binary which include:
+There are several ways to represent negative numbers in binary which include:
 
 Sign and magnitude representation, One's complement representation, and Two's complement method. These are explained below:
 
 ### 1. Sign and Magniture Representation
 
-In this method the leftmost bit is used to indicate the sign of a number which is called a sign bit. The value of sign bit is 1 for negative numbers and 0 for positive numbers. The remaining bit are used to represent the magnitude of the number.
+In this method the leftmost bit is used to indicate the sign of a number which is called a sign bit. The value of sign bit is 1 for negative numbers and 0 for positive numbers. The remaining bits are used to represent the magnitude of the number.
 
 Let's suppose we have a 4-bit number, we can represent the positive number 5 as 0101, and the negative number -5 as 1101. We convert this binary number into its decimal equivalent by performing the binary to decimal conversion we learned in the [previous article](https://www.blackkalu.com/blog/introduction-to-binary-numbers), but remember to convert the sign bit and apply the appropriate sign to the result.
 
