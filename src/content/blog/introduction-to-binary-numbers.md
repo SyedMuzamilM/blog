@@ -17,7 +17,7 @@ The decimal number system might have already been introduced to you in your lowe
 
 (2 x 10<sup>3</sup>) + (5 x 10<sup>2</sup>) + (8 x 10<sup>1</sup>) + (6 x 10<sup>0</sup>) = 2000 + 500 + 80 + 6 = 2586
 
-Now, let's take the binary number system. In this system, the value of the base is  2 because there are only 2 symbols or digits (0 and 1). Just like in a decimal number system, each position is represented by a specific power of the base (10), in a decimal number system each position is represented by a specific power of the base (2). Hence, in this system, the rightmost position is the unit (2<sup>0</sup>) position, the second position from the right is 2's (2<sup>1</sup>) position, and proceeding in this way, we have 4's (2<sup>2</sup>) position, 8's (2<sup>3</sup>) position and so on. Now if we have a binary number, “10101” (written as 10101<sub>2</sub>), its decimal equivalent will be:
+Now, let's take the binary number system. In this system, the value of the base is  2 because there are only 2 symbols or digits (0 and 1). Just like in a decimal number system, each position is represented by a specific power of the base (10), in binary number system each position is represented by a specific power of the base (2). Hence, in this system, the rightmost position is the unit (2<sup>0</sup>) position, the second position from the right is 2's (2<sup>1</sup>) position, and proceeding in this way, we have 4's (2<sup>2</sup>) position, 8's (2<sup>3</sup>) position and so on. Now if we have a binary number, “10101” (written as 10101<sub>2</sub>), its decimal equivalent will be:
 
 (1 x 2<sup>4</sup>) + (0 x 2<sup>3</sup>) + (1 x 2<sup>2</sup>) + (0 x 2<sup>1</sup>) + (1 x 2<sup>0</sup>) = 16 + 0 + 4 + 0 + 1 = 21
 
