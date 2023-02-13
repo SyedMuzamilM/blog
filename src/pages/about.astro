@@ -1,10 +1,14 @@
 ---
 import Layout from "@layouts/Layout.astro";
 import Container from "@components/container.astro";
-import { Image } from "@astrojs/image/components";
-import { authors } from "@data/authors";
 import Pagetitle from "@components/pagetitle.astro";
 import Link from "@components/ui/link.astro";
+import {
+  TwitterIcon,
+  ArrowIcon,
+  GitHubIcon,
+  LinkedinIcon,
+} from "@components/icons";
 ---
 
 <Layout title="About">
@@ -45,6 +49,41 @@ import Link from "@components/ui/link.astro";
           I have also worked as a Web Developer for more than 2 years.
         </p>
       </section>
+      <div class="mt-4 flex flex-col gap-2 md:flex-row md:gap-2">
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          href="https://twitter.com/syedmuzamilm"
+          class="flex w-full border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 no-underline items-center text-neutral-800 dark:text-neutral-200 hover:dark:bg-neutral-900 hover:bg-neutral-100 transition-all justify-between">
+          <div class="flex items-center">
+            <TwitterIcon />
+            <div class="ml-3">Twitter</div>
+          </div>
+          <ArrowIcon />
+        </a>
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          href="https://github.com/syedmuzamilm"
+          class="flex w-full border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 no-underline items-center text-neutral-800 dark:text-neutral-200 hover:dark:bg-neutral-900 hover:bg-neutral-100 transition-all justify-between">
+          <div class="flex items-center">
+            <GitHubIcon />
+            <div class="ml-3">GitHub</div>
+          </div>
+          <ArrowIcon />
+        </a>
+        <a
+          rel="noopener noreferrer"
+          target="_blank"
+          href="https://www.linkedin.com/in/syedmuzamilm/"
+          class="flex w-full border border-neutral-200 dark:border-neutral-800 rounded-lg p-4 no-underline items-center text-neutral-800 dark:text-neutral-200 hover:dark:bg-neutral-900 hover:bg-neutral-100 transition-all justify-between">
+          <div class="flex items-center">
+            <LinkedinIcon />
+            <div class="ml-3">LinkedIn</div>
+          </div>
+          <ArrowIcon />
+        </a>
+      </div>
       <div class="mt-8">
         <Link href="/contact" style="primary">Get in touch</Link>
       </div>

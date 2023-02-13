@@ -74,16 +74,16 @@ declare module 'astro:content' {
   collection: "blog",
   data: InferEntrySchema<"blog">
 },
-"introduction-to-binary-numbers.md": {
-  id: "introduction-to-binary-numbers.md",
-  slug: "introduction-to-binary-numbers",
+"binary-representation-of-negative-numbers.md": {
+  id: "binary-representation-of-negative-numbers.md",
+  slug: "binary-representation-of-negative-numbers",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
 },
-"representation-of-negative-binary-numbers.md": {
-  id: "representation-of-negative-binary-numbers.md",
-  slug: "representation-of-negative-binary-numbers",
+"introduction-to-binary-numbers.md": {
+  id: "introduction-to-binary-numbers.md",
+  slug: "introduction-to-binary-numbers",
   body: string,
   collection: "blog",
   data: InferEntrySchema<"blog">
