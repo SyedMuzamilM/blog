@@ -6,7 +6,7 @@ publishDate: "2023-02-12T11:39:36.050Z"
 image: "https://assets.blackkalu.com/blackkalu/uploads/binary_representation_of_negative_numbers.png"
 category: "technology"
 author: "syed-muzamil"
-tags: [negative binary numbers, binary number, twos complement, ones complement, sign magniture, sign and magniture representation, binary representation of negative numbers, blackkalu, black kalu]
+tags: [negative binary numbers, binary number, twos complement, ones complement, sign magniture, sign and magniture representation, binary representation of negative numbers, blackkalu, black kalu, negative binary numbers 1's complement, negative binary numbers 2's complement, negative binary numbers to decimal]
 ---
 
 In the previous article, I introduced you to the Binary Number system. If you have not read that article [click here](https://www.blackkalu.com/blog/introduction-to-binary-numbers). In that article, I introduced binary numbers, the conversion of decimal and binary numbers, and talked about some applications of the binary number system. I didn’t talk about how negative numbers are represented in the binary number system, that is what I am going to explain in this article.
