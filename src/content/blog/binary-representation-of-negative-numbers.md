@@ -42,7 +42,7 @@ This method has also an ambiguous representation of the number 0, which means 0 
 
 ### 3. Two's Complement Representation
 
-In order to get Two's complement of a binary number, simply invert all the bits of the number. That means converting all the 0's into 1 and all 1's into 0 and then add 1 to this number. In other words, we can say, take the one's complement of the number and add 1 to it. Let's understand this using an example. Suppose there is a binary number 11000101, then its one's complement will be 00111010. After adding 1 to this number it will become 00111011.
+In order to get Two's complement of a binary number, simply invert all the bits of the number and add 1 to it. That means converting all the 0's into 1 and all 1's into 0 and then add 1 to this number. In other words, we can say, take the one's complement of the number and add 1 to it. Let's understand this using an example. Suppose there is a binary number 11000101, then its one's complement will be 00111010. After adding 1 to this number it will become 00111011.
 
 ![Sign Magnitude Representation](https://assets.blackkalu.com/blackkalu/uploads/twos_complement_representation.png) 
 
