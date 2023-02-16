@@ -13,6 +13,12 @@ import compress from "astro-compress";
 import react from "@astrojs/react";
 
 // https://astro.build/config
+import purgecss from "astro-purgecss";
+
+// https://astro.build/config
+import htmlMinifier from "astro-html-minifier";
+
+// https://astro.build/config
 export default defineConfig({
   site: "https://www.blackkalu.com/",
   markdown: {
@@ -29,5 +35,5 @@ export default defineConfig({
     }
   }), serviceWorker(), compress({
     svg: false
-  }), react()]
+  }), react(), purgecss(), htmlMinifier()]
 });
