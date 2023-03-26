@@ -8,15 +8,8 @@ import { remarkReadingTime } from "./src/utils/all";
 import partytown from "@astrojs/partytown";
 import serviceWorker from "astrojs-service-worker";
 import compress from "astro-compress";
-
-// https://astro.build/config
 import react from "@astrojs/react";
-
-// https://astro.build/config
 import purgecss from "astro-purgecss";
-
-// https://astro.build/config
-import htmlMinifier from "astro-html-minifier";
 
 // https://astro.build/config
 export default defineConfig({
@@ -25,15 +18,25 @@ export default defineConfig({
     remarkPlugins: [remarkReadingTime],
     rehypePlugins: ["rehype-plugin-image-native-lazy-loading"],
     smartypants: true,
-    gfm: true
+    gfm: true,
   },
-  integrations: [tailwind(), image({
-    serviceEntryPoint: "@astrojs/image/sharp"
-  }), mdx(), sitemap(), partytown({
-    config: {
-      forward: ["dataLayer.push", "adsbygoogle.push"]
-    }
-  }), serviceWorker(), compress({
-    svg: false
-  }), react(), purgecss(), htmlMinifier()]
+  integrations: [
+    tailwind(),
+    image({
+      serviceEntryPoint: "@astrojs/image/sharp",
+    }),
+    mdx(),
+    sitemap(),
+    partytown({
+      config: {
+        forward: ["dataLayer.push", "adsbygoogle.push"],
+      },
+    }),
+    serviceWorker(),
+    compress({
+      svg: false,
+    }),
+    react(),
+    purgecss(),
+  ],
 });
