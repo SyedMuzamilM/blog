@@ -1,8 +1,7 @@
 ---
 import cx from "classnames";
 
-import { Image, Picture } from "@astrojs/image/components";
-import Label from "@components/ui/label.astro";
+import { Image, Picture } from 'astro:assets';
 import type { Author } from "@data/authors";
 import { authors } from "@data/authors";
 import type { Category } from "@data/category";
@@ -29,8 +28,9 @@ const category = categories.find(
           <Picture
             src={post.data.image}
             widths={[200, 400, 800]}
+            width={100}
+            height={100}
             sizes="(max-width: 640px) 90vw, 480px"
-            aspectRatio={aspect === "landscape" ? "16:9" : "1:1"}
             alt="Thumbnail"
             loading={preloadImage ? "eager" : "lazy"}
             class="w-full h-full rounded-md"

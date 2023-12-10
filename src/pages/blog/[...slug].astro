@@ -1,18 +1,21 @@
 ---
-import { Image, Picture } from "@astrojs/image/components";
+import { Image, Picture } from "astro:assets";
 import Container from "@components/container.astro";
 import { authors } from "@data/authors";
 import { categories } from "@data/category";
 import Layout from "@layouts/Layout.astro";
 import { getFormattedDate } from "@utils/all";
-import { CollectionEntry, getCollection } from "astro:content";
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from 'astro:content'
 
 import type { Author } from "@data/authors";
 import type { Category } from "@data/category";
 
 import PostViews from "@components/ui/PostViews";
 
-type Props = CollectionEntry<"blog">;
+interface Props {
+  post: CollectionEntry<"blog">
+}
 
 export async function getStaticPaths() {
   const blog = await getCollection("blog");
@@ -73,7 +76,7 @@ const category = categories.find(
             <div class="flex items-center space-x-2 text-sm">
               <time
                 class="text-gray-500 dark:text-gray-400"
-                datetime={post.data.publishDate}>
+                datetime={post.data.publishDate.toString()}>
                 {getFormattedDate(post.data.publishDate)}
               </time>
               <!-- <span>
@@ -96,7 +99,6 @@ const category = categories.find(
             src={post.data.image}
             widths={[200, 400, 800]}
             sizes="(max-width: 640px) 90vw, 480px"
-            aspectRatio="16:9"
             width={1024}
             height={576}
             alt="Thumbnail"
@@ -135,7 +137,7 @@ const category = categories.find(
             <div class="flex items-center space-x-2 text-sm">
               <time
                 class="text-gray-500 dark:text-gray-400"
-                datetime={post.data.publishDate}>
+                datetime={post.data.publishDate.toString()}>
                 {getFormattedDate(post.data.publishDate)}
               </time>
               <!-- <span>

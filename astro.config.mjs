@@ -1,7 +1,6 @@
 // https://astro.build/config
-import { defineConfig } from "astro/config";
+import { defineConfig, squooshImageService } from "astro/config";
 import tailwind from "@astrojs/tailwind";
-import image from "@astrojs/image";
 import mdx from "@astrojs/mdx";
 import sitemap from "@astrojs/sitemap";
 import { remarkReadingTime } from "./src/utils/all";
@@ -20,11 +19,11 @@ export default defineConfig({
     smartypants: true,
     gfm: true,
   },
+  image: {
+    service: squooshImageService()
+  },
   integrations: [
     tailwind(),
-    image({
-      serviceEntryPoint: "@astrojs/image/sharp",
-    }),
     mdx(),
     sitemap(),
     partytown({
