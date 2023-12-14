@@ -6,7 +6,7 @@ import sitemap from "@astrojs/sitemap";
 import { remarkReadingTime } from "./src/utils/all";
 import partytown from "@astrojs/partytown";
 import serviceWorker from "astrojs-service-worker";
-import Compress from "astro-compress";
+// import Compress from "astro-compress";
 import react from "@astrojs/react";
 import purgecss from "astro-purgecss";
 
@@ -32,9 +32,9 @@ export default defineConfig({
       },
     }),
     serviceWorker(),
-    Compress({
-      SVG: false
-    }),
+    // Compress({
+    //   SVG: false
+    // }),
     react(),
     purgecss(),
   ],

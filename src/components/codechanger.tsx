@@ -4,8 +4,8 @@ import Markdown from 'react-markdown';
 // import {PrismLight as SyntaxHighlighter} from 'react-syntax-highlighter'
 // import {dark} from 'react-syntax-highlighter/dist/esm/styles/prism'
 
-type Languages = 'python' | 'typescript' | 'rust' | 'golang' | 'scala' | 'elixer' | 'javascript' | 'java'
-const LANGUAGES = ['python', 'typescript', 'rust', 'golang', 'scala', 'elixer', 'javascript', 'java']
+type Languages = 'python' | 'typescript' | 'rust' | 'golang' | 'scala' | 'elixer' | 'javascript' | 'java' | 'php'
+const LANGUAGES = ['python', 'typescript', 'rust', 'golang', 'scala', 'elixer', 'javascript', 'java', 'php']
 
 export const CodeChanger = () => {
   const [inputCode, setInputCode] = useState<string>();
