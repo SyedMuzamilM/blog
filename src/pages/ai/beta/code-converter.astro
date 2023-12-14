@@ -1,0 +1,26 @@
+---
+import { CodeChanger } from "../../../components/codechanger";
+import Container from "../../../components/container.astro";
+import Pagetitle from "../../../components/pagetitle.astro";
+import Layout from "../../../layouts/Layout.astro";
+
+---
+
+<Layout 
+    title="AI Code Converter - Beta"
+    desc="Simplify code translation effortlessly with our AI Code Converter. Seamlessly convert your code from one language to another with ease."
+    ogimage="https://www.blackkalu.com/ai-code-converter.png"
+    >
+    <Container>
+        <Pagetitle>
+            <Fragment slot="title">
+                Code Convertor 
+                <span class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-red-900 dark:text-red-300">
+                    beta
+                </span>
+            </Fragment>
+            <Fragment slot="desc">Expermenting with AI to build a simple code converter</Fragment>
+        </Pagetitle>
+        <CodeChanger client:load />
+    </Container>
+</Layout>

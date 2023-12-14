@@ -1,0 +1,33 @@
+---
+import Container from "../../components/container.astro";
+import Pagetitle from "../../components/pagetitle.astro";
+import Layout from "../../layouts/Layout.astro";
+
+import { Image } from 'astro:assets'
+
+---
+
+<Layout title="AI beta">
+    <Container>
+        <Pagetitle>
+            <Fragment slot="title">
+                AI Tools
+            </Fragment>
+            <Fragment slot="desc">Expermenting with AI to build some useful tools for the public</Fragment>
+        </Pagetitle>
+        <div class="mt-8">
+            <h2 class="text-2xl font-medium mb-4">Beta Tools</h2>
+            <a href="/ai/beta/code-converter" class="hover:bg-gray-400">
+                <div class="mb-2">
+                    <Image src="/pythonvsjavascript.jpeg" alt="Code Converter" width="300" height="300" />
+                </div>
+                <p>
+                    Code Converter
+                    <span class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-red-900 dark:text-red-300">
+                        beta
+                    </span>
+                </p>
+            </a>
+        </div>
+    </Container>
+</Layout>

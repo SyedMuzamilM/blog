@@ -1,4 +1,5 @@
 ---
+import Banner from "@components/banner.astro";
 import Footer from "@components/footer.astro";
 import Navbar from "@components/navbar.astro";
 import "@fontsource/kaisei-tokumin";
@@ -102,6 +103,7 @@ const makeKeyWords = keywords
     <!-- End Cloudflare Web Analytics -->
   </head>
   <body>
+    <Banner />
     <Navbar />
     <slot />
     <Footer />
