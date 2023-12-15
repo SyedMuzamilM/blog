@@ -6,9 +6,10 @@ import sitemap from "@astrojs/sitemap";
 import { remarkReadingTime } from "./src/utils/all";
 import partytown from "@astrojs/partytown";
 import serviceWorker from "astrojs-service-worker";
-// import Compress from "astro-compress";
 import react from "@astrojs/react";
 import purgecss from "astro-purgecss";
+
+import compress from "astro-compress";
 
 // https://astro.build/config
 export default defineConfig({
@@ -17,25 +18,18 @@ export default defineConfig({
     remarkPlugins: [remarkReadingTime],
     rehypePlugins: ["rehype-plugin-image-native-lazy-loading"],
     smartypants: true,
-    gfm: true,
+    gfm: true
   },
   image: {
     service: squooshImageService()
   },
-  integrations: [
-    tailwind(),
-    mdx(),
-    sitemap(),
-    partytown({
-      config: {
-        forward: ["dataLayer.push", "adsbygoogle.push"],
-      },
-    }),
-    serviceWorker(),
-    // Compress({
-    //   SVG: false
-    // }),
-    react(),
-    purgecss(),
-  ],
+  integrations: [tailwind(), mdx(), sitemap(), partytown({
+    config: {
+      forward: ["dataLayer.push", "adsbygoogle.push"]
+    }
+  }), serviceWorker(),
+  compress({
+    SVG: false
+  }),
+  react(), purgecss()]
 });

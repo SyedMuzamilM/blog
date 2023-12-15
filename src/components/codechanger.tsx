@@ -29,8 +29,8 @@ export const CodeChanger = () => {
 
   return (
     <div className='mt-8'>
-        <div className='mt-4 flex gap-4'>
-            <div className='w-1/2'>
+        <div className='mt-4 flex flex-col md:flex-row gap-4'>
+            <div className='w-full md:w-1/2'>
                 <div className="flex justify-between items-center w-full">
                     <h3>Input Code</h3>
                     <select defaultValue={inputLanguage} onChange={(e) => setInputLanguage(e.target.value as Languages)}>
@@ -41,7 +41,7 @@ export const CodeChanger = () => {
                 </div>
                 <textarea value={inputCode} onChange={(e) => setInputCode(e.target.value)} className='w-full border-2 resize-none min-h-[384px] p-2 text-base font-mono'  />
             </div>
-            <div className='w-1/2'>
+            <div className='w-full md:w-1/2'>
                 <div className="flex justify-between items-center w-full">
                     <h3>Output Code</h3>
                     <select defaultValue={outputLanguage} onChange={(e) => setOutputLanguage(e.target.value as Languages)}>
