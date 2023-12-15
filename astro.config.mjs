@@ -8,15 +8,14 @@ import partytown from "@astrojs/partytown";
 import serviceWorker from "astrojs-service-worker";
 import react from "@astrojs/react";
 import purgecss from "astro-purgecss";
-
-import compress from "astro-compress";
+import rehype from 'rehype-plugin-image-native-lazy-loading'
 
 // https://astro.build/config
 export default defineConfig({
   site: "https://www.blackkalu.com/",
   markdown: {
     remarkPlugins: [remarkReadingTime],
-    rehypePlugins: ["rehype-plugin-image-native-lazy-loading"],
+    rehypePlugins: [rehype],
     smartypants: true,
     gfm: true
   },
@@ -28,8 +27,5 @@ export default defineConfig({
       forward: ["dataLayer.push", "adsbygoogle.push"]
     }
   }), serviceWorker(),
-  compress({
-    SVG: false
-  }),
   react(), purgecss()]
 });

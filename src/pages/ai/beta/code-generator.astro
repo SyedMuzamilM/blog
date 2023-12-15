@@ -8,21 +8,21 @@ import Layout from "../../../layouts/Layout.astro";
 ---
 
 <Layout 
-    title="AI Code Converter - Beta"
-    desc="Simplify code translation effortlessly with our AI Code Converter. Seamlessly convert your code from one language to another with ease."
-    ogimage="https://www.blackkalu.com/ai-code-converter.png"
+    title="AI Code Generator - Beta"
+    desc="Simplify code generation effortlessly with our AI Code Generator. Seamlessly generator your tailwindcss and reactjs code from your prompt with ease."
+    ogimage="https://www.blackkalu.com/ai-code-generator.png"
     >
     <Container>
         <Pagetitle>
             <Fragment slot="title">
-                Code Convertor 
+                Code Generator 
                 <span class="bg-red-100 text-red-800 text-xs font-medium me-2 px-2.5 py-0.5 rounded-full dark:bg-red-900 dark:text-red-300">
                     beta
                 </span>
             </Fragment>
-            <Fragment slot="desc">Expermenting with AI to build a simple code converter</Fragment>
+            <Fragment slot="desc">Generate UI from your prompts. Generate ReactJS and tailwindcss UI with ease. Try to use it on you own risk, this is a beta tool.</Fragment>
         </Pagetitle>
-        <CodeChanger client:only />
-        <!-- <RenderCode client:only /> -->
+        <!-- <CodeChanger client:only /> -->
+        <RenderCode client:only />
     </Container>
 </Layout>
