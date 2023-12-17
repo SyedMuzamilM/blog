@@ -35,8 +35,6 @@ export default defineConfig({
     serviceWorker(),
     react(), 
     purgecss(),
-    Compress({
-      SVG: false
-    }),
+    Compress(),
   ]
 });
