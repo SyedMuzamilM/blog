@@ -9,6 +9,7 @@ import serviceWorker from "astrojs-service-worker";
 import react from "@astrojs/react";
 import purgecss from "astro-purgecss";
 import rehype from 'rehype-plugin-image-native-lazy-loading'
+import Compress from 'astro-compress' 
 
 // https://astro.build/config
 export default defineConfig({
@@ -22,10 +23,20 @@ export default defineConfig({
   image: {
     service: squooshImageService()
   },
-  integrations: [tailwind(), mdx(), sitemap(), partytown({
-    config: {
-      forward: ["dataLayer.push", "adsbygoogle.push"]
-    }
-  }), serviceWorker(),
-  react(), purgecss()]
+  integrations: [
+    tailwind(), 
+    mdx(), 
+    sitemap(), 
+    partytown({
+      config: {
+        forward: ["dataLayer.push", "adsbygoogle.push"]
+      }
+    }), 
+    serviceWorker(),
+    react(), 
+    purgecss(),
+    Compress({
+      SVG: false
+    }),
+  ]
 });

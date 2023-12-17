@@ -41,6 +41,7 @@
   "devDependencies": {
     "@tailwindcss/line-clamp": "^0.4.2",
     "@tailwindcss/typography": "^0.5.9",
+    "astro-compress": "astro-community/AstroCompress#no-sharp",
     "classnames": "^2.3.2"
   }
 }
