@@ -50,7 +50,7 @@ export const CodeChanger = () => {
                         ))}
                     </select>
                 </div>
-                <div className="min-h-[384px] w-full border-2 p-2 text-base font-mono overflow-x-auto">
+                <div className="min-h-[384px] w-full border-2 p-2 text-base overflow-x-auto">
                     <Markdown
                      children={resultCode}
                     //  components={{
@@ -77,8 +77,13 @@ export const CodeChanger = () => {
             </div>
         </div>
         <div className='flex justify-end mt-4'>
-            <button className='px-3 py-2 bg-gray-800 text-white rounded' onClick={handleConvertCode} disabled={loading}>
-                {loading ? 'Converting...' : 'Convert'}
+            <button
+                type="submit"
+                onClick={handleConvertCode}
+                disabled={loading}
+                className="bg-black text-white rounded-full px-3 py-1"
+            >
+                {loading ? "Converting..." : "Convert"}
             </button>
         </div>
     </div>
