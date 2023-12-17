@@ -7,7 +7,7 @@ import { remarkReadingTime } from "./src/utils/all";
 import partytown from "@astrojs/partytown";
 import serviceWorker from "astrojs-service-worker";
 import react from "@astrojs/react";
-import purgecss from "astro-purgecss";
+// import purgecss from "astro-purgecss";
 import rehype from 'rehype-plugin-image-native-lazy-loading'
 import Compress from 'astro-compress' 
 
@@ -24,7 +24,6 @@ export default defineConfig({
     service: squooshImageService()
   },
   integrations: [
-    tailwind(), 
     mdx(), 
     sitemap(), 
     partytown({
@@ -34,10 +33,8 @@ export default defineConfig({
     }), 
     serviceWorker(),
     react(), 
-    purgecss(),
-    Compress({
-      CSS: false,
-      SVG: false
-    }),
+    // purgecss(),
+    Compress(),
+    tailwind(), 
   ]
 });
