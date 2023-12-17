@@ -70,8 +70,10 @@ const category = categories.find(
           </div>
 
           <div>
-            <p class="text-gray-800 dark:text-gray-400">
-              {author.name}
+            <p class="text-gray-800 dark:text-gray-400 hover:underline">
+              <a target="_blank" href={author.linkedin}>
+                {author.name}
+              </a>
             </p>
             <div class="flex items-center space-x-2 text-sm">
               <time
@@ -131,8 +133,10 @@ const category = categories.find(
           </div>
 
           <div>
-            <p class="text-gray-800 dark:text-gray-400">
-              {author.name}
+            <p class="text-gray-800 dark:text-gray-400 hover:underline">
+              <a target="_blank" href={author.linkedin}>
+                {author.name}
+              </a>
             </p>
             <div class="flex items-center space-x-2 text-sm">
               <time
