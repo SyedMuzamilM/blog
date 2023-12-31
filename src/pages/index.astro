@@ -1,5 +1,7 @@
 ---
+import { Card, HoverEffect } from "@components/card-hover-effect";
 import Container from "@components/container.astro";
+import Herosection from "@components/herosection.astro";
 import Postlist from "@components/postlist.astro";
 import Layout from "@layouts/Layout.astro";
 import { latestPosts } from "@utils/content";
@@ -44,11 +46,29 @@ const docs: Array<{ url: string; name: string }> = [
     url: "https://assets.blackkalu.com/blackkalu/docs/World-Wide-Web.pptx",
   },
 ];
+
+const aiTools = [
+  {
+    title: 'Ai Code Converter',
+    description: 'Simplify code translation effortlessly with our ai code converter. seamlessly convert your code from one language to another with ease.',
+    link: '/ai/beta/code-converter'
+  },
+  {
+    title: 'Ai Code Generater',
+    description: 'Simplify code generation effortlessly with our AI Code Generator. Seamlessly generator your tailwindcss and reactjs code from your prompt with ease.',
+    link: '/ai/beta/code-converter'
+  }
+]
 ---
 
 <Layout title="">
   <main>
+    <Herosection />
     <Container>
+      <div class="flex justify-between mb-4">
+        <h2 class="text-2xl md:text-3xl lg:text-4xl">Tech Articles</h2>
+        <a href="/blog" class="text-blue-800 hover:underline">View All</a>
+      </div>
       <div class="grid gap-10 lg:gap-10 md:grid-cols-2">
         {
           latestPosts
@@ -58,14 +78,23 @@ const docs: Array<{ url: string; name: string }> = [
             ))
         }
       </div>
-      <div class="grid gap-10 mt-10 lg:gap-10 md:grid-cols-2 xl:grid-cols-3">
+      <!-- <div class="grid gap-10 mt-10 lg:gap-10 md:grid-cols-2 xl:grid-cols-3">
         {
           latestPosts
             .slice(2)
             .map((post) => <Postlist post={post} aspect="square" />)
         }
-      </div>
+      </div> -->
     </Container>
+    <section class="pb-8">
+      <Container>
+        <div class="flex justify-between">
+          <h2 class="text-2xl md:text-3xl lg:text-4x">Introducting AI Tools</h2>
+          <a href="/ai" class="text-blue-800 hover:underline">View All</a>
+        </div>
+        <HoverEffect items={aiTools} />
+      </Container>
+    </section>
     <section class="pb-8 bg-zinc-100">
       <Container>
         <h2 class="text-2xl md:text-3xl lg:text-4xl mb-4">Presentations</h2>
