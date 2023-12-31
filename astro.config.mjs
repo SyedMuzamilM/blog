@@ -36,5 +36,8 @@ export default defineConfig({
     // purgecss(),
     Compress(),
     tailwind(), 
-  ]
+  ],
+  redirects: {
+    '/archive': '/blog'
+  }
 });
