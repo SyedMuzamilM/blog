@@ -24,11 +24,11 @@ tags:
   ]
 ---
 
-In one of my previous articles, I explained what bitwise operators are. and I explained bit shifting operators, and how they work with some examples if you have not read that article [click here](https://www.blackkalu.com/blog/what-are-bitwise-operators/). Also, it would be best if you had some understanding of the [binary number system](https://www.blackkalu.com/blog/introduction-to-binary-number-system/) to properly understand this article. Without wasting any more time let's dive into the article.
+In one of my previous articles, I explained what bitwise operators are. and I explained bit shifting operators, and how they work with some examples if you have not read that article [click here](https://www.blackkalu.com/blog/what-are-bitwise-operators/). Also, it would be best if you had some understanding of the [binary number system](https://www.blackkalu.com/blog/introduction-to-binary-number-system/) to properly understand this article. Now, let's dive into the article.
 
 ## Bitwise AND Operator
 
-Bitwise AND denoted by `&` almost works in the same way as logical AND (&&). If we talk about logical AND we check two conditions (operands) one on the left side of && and another on the right side, and if both the conditions are true, it will return true else false. We can say Logical AND works on Booleans. Bitwise AND works in the same way but it operators on bits. Let's consider 0 as false and 1 as true. In that case, Bitwise AND would work the same way as Logical AND. If both the right and left sides are 1 (true) then it will return 1 else 0 (false).
+Bitwise AND denoted by `&` almost works in the same way as logical AND (&&). If we talk about logical AND we check two conditions (operands) one on the left side of && and another on the right side, and if both the conditions are true, it will return true else false. We can say Logical AND works on Booleans. Bitwise AND (&) works the same way, but it operators on bits rather than numbers. Let's consider 0 as false and 1 as true. In that case, Bitwise AND would work the same way as Logical AND. If both the right and left sides are 1 (true) then it will return 1 else 0 (false).
 
 In other words, we can say Bitwise AND takes two numbers as operands and returns 1 if both operands are 1 else 0. Following is the Truth table for the Bitwise AND operator.
 
@@ -47,13 +47,13 @@ void main() {
 }
 ```
 
-Since Bitwise Operators work on the bit level, we will convert the numbers into their [binary form](https://www.blackkalu.com/blog/introduction-to-binary-numbers/) and then we will compare all the individual bits.
+Since Bitwise Operators work on the bit level, we need to convert the numbers into their [binary form](https://www.blackkalu.com/blog/introduction-to-binary-numbers/) and then compare all the individual bits.
 
-Here x is 4 and y is 5, and say the size of int is 4 bytes (which you can check by `sizeof(int)` in c/c++). So, the binary representation of 4 would be: 00000000 00000000 00000000 00000100
+Here x is 4 and y is 5, and say the size of int is 4 bytes (which you can check by `sizeof(int)` in c/c++). Here we will only take 1 byte. So, the binary representation of 4 would be: 00000100
 
-and the binary representation 5 would be 00000000 00000000 00000000 00000101
+and the binary representation 5 would be 00000101
 
-When using the Bitwise AND operator on x and y, we will have to compare all the bits individually. In other words, we can say we need to apply Bitwise AND on individual bits from right to left. In our case, we will take the last byte for simplicity.
+When using the Bitwise AND (&) operator on x and y, we have to compare all the bits individually. In other words, we can say we need to apply Bitwise AND (&) on individual bits from right to left.
 
 `00000100 & 00000101 = 00000100 // 4`
 
@@ -61,14 +61,13 @@ As you can see, we compared all the bits of 4 and 5 individually and the output 
 
 ### Uses of Bitwise AND
 
-1. Checking if a number is even or odd: As I mentioned earlier, we can use the Bitwise AND operator to check if a number is even or odd. Specifically, if we apply the Bitwise AND operator on numbers n and 1, and the result is 0, then the number is even, otherwise it's odd.
-2. Masking: In computer science, a mask is a sequence of bits that can be used to extract certain bits from another sequence of bits. We can use the Bitwise AND operator to apply a mask to a number. Specifically, if we apply the Bitwise AND operator on a number n and a mask m, then we get a new number that contains only the bits that are set to 1 in the mask m.
-3. Setting or clearing bits: We can use the Bitwise AND operator to set or clear specific bits in a number. To set a bit, we can apply the Bitwise OR operator on the number and a mask that has only the bit we want to set to 1. To clear a bit, we can apply the Bitwise AND operator on the number and a mask that has only the bit we want to clear set to 0.
-4. Checking if a bit is set: We can use the Bitwise AND operator to check if a specific bit is set in a number. Specifically, if we apply the Bitwise AND operator on a number n and a mask that has only the bit we want to check set to 1, then the result will be 0 if the bit is not set, and non-zero if the bit is set.
+1. **Checking if a number is even or odd**: We can use the Bitwise AND operator to check weather a number is even or odd. Specifically, if we apply the Bitwise AND (&) operator on numbers n and 1, and the result is 0, then the number is even, otherwise it's odd.
+2. **Masking**: In computer science, a mask is a sequence of bits that can be used to extract certain bits from another sequence of bits. We can use the Bitwise AND operator to apply a mask to a number. Specifically, if we apply the Bitwise AND operator on a number n and a mask m, then we get a new number that contains only the bits that are set to 1 in the mask m.
+3. **Checking if a bit is set**: We can use the Bitwise AND operator to check if a specific bit is set in a number. Specifically, if we apply the Bitwise AND operator on a number n and a mask that has only the bit we want to check set to 1, then the result will be 0 if the bit is not set, and non-zero if the bit is set.
 
 ## Bitwise OR Operator
 
-The Bitwise OR operator is denoted by the `|` symbol, and it works on individual bits of two operands just like the Bitwise AND operator. Specifically, if we apply the Bitwise OR operator on two numbers, it compares the individual bits of the binary representation of the two numbers and returns a new number where each bit is 1 if the corresponding bits in either or both operands are 1.
+The Bitwise OR operator is denoted by the `|` symbol, and it works on individual bits of two operands just like the Bitwise AND (&) operator. Specifically, if we apply the Bitwise OR operator on two numbers, it compares the individual bits of the binary representation of the two numbers and returns a new number where each bit is 1 if the corresponding bits in either or both operands are 1.
 
 ![OR Gate Truth Table](https://assets.blackkalu.com/blackkalu/uploads/or_gate_truth_table.png)
 
